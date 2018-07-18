@@ -1,0 +1,14 @@
+{
+  "name": "webticker",
+  "homepage": "https://github.com/mazedigital/Web-Ticker",
+  "version": "3.0.0",
+  "_release": "3.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v3.0.0",
+    "commit": "63bcbc3eb375c005f08788b5c4e52ea8c7055184"
+  },
+  "_source": "https://github.com/mazedigital/Web-Ticker.git",
+  "_target": "^3.0.0",
+  "_originalSource": "webticker"
+}

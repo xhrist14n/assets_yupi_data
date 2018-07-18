@@ -1,0 +1,48 @@
+{
+  "name": "datatables.net-keytable",
+  "description": "KeyTable for DataTables ",
+  "main": [
+    "js/dataTables.keyTable.js"
+  ],
+  "keywords": [
+    "spreadsheet",
+    "excel",
+    "keyboard",
+    "DataTables",
+    "jQuery",
+    "table",
+    "DataTables"
+  ],
+  "dependencies": {
+    "jquery": ">=1.7",
+    "datatables.net": ">=1.10.9"
+  },
+  "moduleType": [
+    "globals",
+    "amd",
+    "node"
+  ],
+  "ignore": [
+    "composer.json",
+    "datatables.json",
+    "package.json"
+  ],
+  "authors": [
+    {
+      "name": "SpryMedia Ltd",
+      "homepage": "https://datatables.net"
+    }
+  ],
+  "homepage": "https://datatables.net",
+  "license": "MIT",
+  "version": "2.4.1",
+  "_release": "2.4.1",
+  "_resolution": {
+    "type": "version",
+    "tag": "2.4.1",
+    "commit": "46aa6e72e0d19d33e389a1044f626fdd695d4afb"
+  },
+  "_source": "https://github.com/DataTables/Dist-DataTables-KeyTable.git",
+  "_target": ">=2.0.0",
+  "_originalSource": "datatables.net-keytable"
+}

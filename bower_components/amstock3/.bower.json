@@ -1,0 +1,34 @@
+{
+  "name": "amstock3",
+  "authors": [
+    "amCharts <contact@amcharts.com>"
+  ],
+  "description": "JavaScript Stock Chart V3",
+  "main": [
+    "amcharts/amstock.js"
+  ],
+  "keywords": [
+    "amcharts",
+    "charts",
+    "javascript"
+  ],
+  "moduleType": [
+    "globals"
+  ],
+  "license": "Custom",
+  "homepage": "http://www.amcharts.com/",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/amcharts/amstock3.git"
+  },
+  "version": "3.21.13",
+  "_release": "3.21.13",
+  "_resolution": {
+    "type": "version",
+    "tag": "3.21.13",
+    "commit": "3798c0c1dd4dfe46704ac7d9835b83c99ca08688"
+  },
+  "_source": "https://github.com/amcharts/amstock3.git",
+  "_target": "^3.21.13",
+  "_originalSource": "amstock3"
+}

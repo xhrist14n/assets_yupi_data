@@ -1,0 +1,9 @@
+{
+  "name": "bootstrap-editable",
+  "version": "1.4.5",
+  "homepage": "https://github.com/BrandyMint/bootstrap-editable",
+  "authors": [
+    "Nitr <antynitr@gmail.com>"
+  ], 
+  "license": "MIT"
+}

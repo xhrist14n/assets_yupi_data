@@ -1,0 +1,17 @@
+{
+  "name": "bootstrap-editable",
+  "homepage": "https://github.com/BrandyMint/bootstrap-editable",
+  "authors": [
+    "Nitr <antynitr@gmail.com>"
+  ],
+  "license": "MIT",
+  "_release": "5eda38d4c4",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "5eda38d4c48995045cfd362b94ac9493f6a772b6"
+  },
+  "_source": "https://github.com/BrandyMint/bootstrap-editable.git",
+  "_target": "*",
+  "_originalSource": "brandimint-xediatable-bootstrap"
+}
