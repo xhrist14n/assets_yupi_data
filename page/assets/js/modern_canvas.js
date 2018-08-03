@@ -1,11 +1,12 @@
+// canvas in page 
 var canvas;
 var ctx;
 
 
 (function($) {
-	'use strict';
+		'use strict';
 	
-/* BACKGROUND ANIMATION JS */
+		/* BACKGROUND ANIMATION JS */
 		window.addEventListener('load', function () {
 			var w = window.innerWidth,
 			h = window.innerHeight;
