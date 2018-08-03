@@ -10,14 +10,13 @@ var ctx;
 			var w = window.innerWidth,
 			h = window.innerHeight;
 			try{
-				canvas = document.getElementById('banner_canvas'),
-			}catch()
-			if(canvas!=null){
-				ctx = canvas.getContext('2d');
-				canvas.setAttribute('width',w);
-				canvas.setAttribute('height',h);
-			}
-			
+				canvas = document.getElementById('banner_canvas');
+				if(canvas!=null){
+					ctx = canvas.getContext('2d');
+					canvas.setAttribute('width',w);
+					canvas.setAttribute('height',h);
+				}
+			}catch(){}			
 			var rate = 60,
 			arc = 200,
 			time,
@@ -27,9 +26,6 @@ var ctx;
 			parts = new Array,
 			colors = ['#FFC56E','#FF6CC6','#4241B8','#F69040','#0EADC9'];
 			var mouse = { x: 0, y: 0 };
-			
-			
-			
 			function create() {
 			  time = 0;
 			  count = 0;
@@ -54,45 +50,45 @@ var ctx;
 					canvas.addEventListener('mousemove', MouseMove, false);
 				}
 			   
-			  for(var i = 0; i < arc; i++) {
-				var li = parts[i];
-				var distanceFactor = DistanceBetween( mouse, parts[i] );
-				var distanceFactor = Math.max( Math.min( 15 - ( distanceFactor / 10 ), 10 ), 1 );
-				if(ctx!=null){
-					ctx.beginPath();
-					ctx.arc(li.x,li.y,li.size*distanceFactor,0,Math.PI*2,false);
-					ctx.fillStyle = li.c;
-					ctx.strokeStyle=li.c;
-					if(i%2==0)
-					  ctx.stroke();
-					else
-					  ctx.fill();
-				}
-				
-				
-				
-				li.x = li.x + li.toX * (time * 0.05);
-				li.y = li.y + li.toY * (time * 0.05);
-				
-				if(li.x > w){
-				   li.x = 0; 
-				}
-				if(li.y > h) {
-				   li.y = 0; 
-				}
-				if(li.x < 0) {
-				   li.x = w; 
-				}
-				if(li.y < 0) {
-				   li.y = h; 
-				}
-			   
+				for(var i = 0; i < arc; i++) {
+					var li = parts[i];
+					var distanceFactor = DistanceBetween( mouse, parts[i] );
+					var distanceFactor = Math.max( Math.min( 15 - ( distanceFactor / 10 ), 10 ), 1 );
+					if(ctx!=null){
+						ctx.beginPath();
+						ctx.arc(li.x,li.y,li.size*distanceFactor,0,Math.PI*2,false);
+						ctx.fillStyle = li.c;
+						ctx.strokeStyle=li.c;
+						if(i%2==0)
+						  ctx.stroke();
+						else
+						  ctx.fill();
+					}
+
+
+
+					li.x = li.x + li.toX * (time * 0.05);
+					li.y = li.y + li.toY * (time * 0.05);
+
+					if(li.x > w){
+					   li.x = 0; 
+					}
+					if(li.y > h) {
+					   li.y = 0; 
+					}
+					if(li.x < 0) {
+					   li.x = w; 
+					}
+					if(li.y < 0) {
+					   li.y = h; 
+					}
+
 				 
-			  }
-			  if(time < speed) {
-				time++;
-			  }
-			  setTimeout(particles,1000/rate);
+				}
+				if(time < speed) {
+					time++;
+				}
+				setTimeout(particles,1000/rate);
 			}
 			function MouseMove(e) {
 			   mouse.x = e.layerX;
