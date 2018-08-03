@@ -1,13 +1,24 @@
+var canvas;
+var ctx;
+
+
 (function($) {
 	'use strict';
 	
 /* BACKGROUND ANIMATION JS */
 		window.addEventListener('load', function () {
 			var w = window.innerWidth,
-			h = window.innerHeight,
-			canvas = document.getElementById('banner_canvas'),
-			ctx = canvas.getContext('2d'),
-			rate = 60,
+			h = window.innerHeight;
+			try{
+				canvas = document.getElementById('banner_canvas'),
+			}catch()
+			if(canvas!=null){
+				ctx = canvas.getContext('2d');
+				canvas.setAttribute('width',w);
+				canvas.setAttribute('height',h);
+			}
+			
+			var rate = 60,
 			arc = 200,
 			time,
 			count,
@@ -17,8 +28,7 @@
 			colors = ['#FFC56E','#FF6CC6','#4241B8','#F69040','#0EADC9'];
 			var mouse = { x: 0, y: 0 };
 			
-			canvas.setAttribute('width',w);
-			canvas.setAttribute('height',h);
+			
 			
 			function create() {
 			  time = 0;
@@ -37,20 +47,29 @@
 			}
 			
 			function particles() {
-			  ctx.clearRect(0,0,w,h);
-			   canvas.addEventListener('mousemove', MouseMove, false);
+				if(ctx!=null){
+					ctx.clearRect(0,0,w,h);
+				}
+				if(canvas!=null){
+					canvas.addEventListener('mousemove', MouseMove, false);
+				}
+			   
 			  for(var i = 0; i < arc; i++) {
 				var li = parts[i];
 				var distanceFactor = DistanceBetween( mouse, parts[i] );
 				var distanceFactor = Math.max( Math.min( 15 - ( distanceFactor / 10 ), 10 ), 1 );
-				ctx.beginPath();
-				ctx.arc(li.x,li.y,li.size*distanceFactor,0,Math.PI*2,false);
-				ctx.fillStyle = li.c;
-				ctx.strokeStyle=li.c;
-				if(i%2==0)
-				  ctx.stroke();
-				else
-				  ctx.fill();
+				if(ctx!=null){
+					ctx.beginPath();
+					ctx.arc(li.x,li.y,li.size*distanceFactor,0,Math.PI*2,false);
+					ctx.fillStyle = li.c;
+					ctx.strokeStyle=li.c;
+					if(i%2==0)
+					  ctx.stroke();
+					else
+					  ctx.fill();
+				}
+				
+				
 				
 				li.x = li.x + li.toX * (time * 0.05);
 				li.y = li.y + li.toY * (time * 0.05);
