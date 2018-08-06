@@ -17,7 +17,7 @@ var ctx;
 					canvas.setAttribute('width',w);
 					canvas.setAttribute('height',h);
 				}
-			}catch(){}			
+			}catch(ex){}			
 			var rate = 60,
 			arc = 200,
 			time,
